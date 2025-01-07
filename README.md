@@ -1,4 +1,4 @@
-# AI-Generated Image Store
+# AI-Generated Image Store ![App Homepage](HomePage.png)
 
 ## Overview
 
