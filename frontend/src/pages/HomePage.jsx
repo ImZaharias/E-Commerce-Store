@@ -4,12 +4,12 @@ import { useProductStore } from "../stores/useProductStore";
 import FeaturedProducts from "../components/FeaturedProducts";
 
 const categories = [
-	{ href: "/dream-worlds", name: "Dream Worlds", imageUrl: "/dream-worlds.jpg" },
-	{ href: "/future-designs", name: "Future Designs", imageUrl: "/future-designs.jpg" },
-	{ href: "/nature-shots", name: "Nature Shots", imageUrl: "/nature-shots.jpg" },
-	{ href: "/magic-themes", name: "Magic Themes", imageUrl: "/magic-themes.jpg" },
-	{ href: "/cool-patterns", name: "Cool Patterns", imageUrl: "/cool-patterns.jpg" },
-    { href: "/artistic-portraits", name: "Artistic Portraits", imageUrl: "/artistic-portraits.jpg" },
+	{ href: "/Dream Worlds", name: "Dream Worlds", imageUrl: "/dream-worlds.jpg" },
+	{ href: "/Future Designs", name: "Future Designs", imageUrl: "/future-designs.jpg" },
+	{ href: "/Nature Shots", name: "Nature Shots", imageUrl: "/nature-shots.jpg" },
+	{ href: "/Magic Themes", name: "Magic Themes", imageUrl: "/magic-themes.jpg" },
+	{ href: "/Cool Patterns", name: "Cool Patterns", imageUrl: "/cool-patterns.jpg" },
+    { href: "/Artistic Portraits", name: "Artistic Portraits", imageUrl: "/artistic-portraits.jpg" },
 ];
 
 const HomePage = () => {

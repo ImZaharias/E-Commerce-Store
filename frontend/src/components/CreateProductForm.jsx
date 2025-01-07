@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { PlusCircle, Upload, Loader } from "lucide-react";
 import { useProductStore } from "../stores/useProductStore";
 
-const categories = ["Dream Worlds", "Future Designs", "Nature Shots", "Magic Themes", "Cool Patterns"];
+const categories = ["Dream Worlds", "Future Designs", "Nature Shots", "Magic Themes", "Cool Patterns", "Artistic Portraits"];
 
 const CreateProductForm = () => {
 	const [newProduct, setNewProduct] = useState({
