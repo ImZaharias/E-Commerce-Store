@@ -1,36 +1,49 @@
-# E-Commerce Store
+# AI-Generated Image Store
 
 ## Overview
 
-This E-Commerce Store is a modern, full-stack application providing a feature-rich online shopping experience. It includes user-friendly functionalities for customers and robust tools for administrators to manage products, orders, and analytics.
+The **AI-Generated Image Store** is an e-commerce platform where users can explore and purchase AI-generated images. It features a Node.js backend, React frontend, and integrations for secure payments and efficient data handling.
+
+---
 
 ## Features
 
-### Backend
-- Built with **Node.js** and **Express.js**.
-- **MongoDB** integration for data storage.
-- **Redis** for caching and session management.
-- **Stripe** integration for secure payments.
-- RESTful APIs for seamless frontend-backend communication.
-- Handles user authentication, cart, orders, coupons, and analytics.
+- Browse and buy AI-generated artwork
+- User-friendly interface with responsive design
+- Secure payments via Stripe
+- Admin tools for product and order management
 
-### Frontend
-- Built with **React.js** and **Vite** for fast performance.
-- **TailwindCSS** for responsive and modern UI design.
-- Dynamic product displays and categorization.
-- User-friendly cart and checkout flow.
-- Admin dashboard for inventory and analytics management.
+---
 
-## Getting Started
+## Build & Deploy
 
 ### Prerequisites
-- Node.js and npm
-- MongoDB
-- Redis
+- **Node.js**, **npm**, **MongoDB**, **Redis**, and Stripe API keys
 
-### Installation
+### Steps
 
-1. Clone the repository:
+#### Backend
+1. Navigate to `backend/` and install dependencies:
    ```bash
-   git clone https://github.com/yourusername/e-commerce-store.git
-   cd e-commerce-store
+   cd backend
+   npm install
+
+MONGODB_URI=<your-mongodb-uri>
+REDIS_URL=<your-redis-url>
+STRIPE_SECRET_KEY=<your-stripe-secret-key>
+
+npm start
+
+cd frontend
+npm install
+
+Update src/lib/axios.js with the backend URL.
+
+npm run build
+
+##Access
+#Frontend: Your hosting URL
+#Backend: Use Postman or the frontend to test endpoints.
+##Technologies
+#Backend: Node.js, Express.js, MongoDB, Redis, Stripe
+#Frontend: React.js, Vite, TailwindCSS
