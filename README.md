@@ -49,3 +49,11 @@ npm run build
 ##Technologies
 - Backend: Node.js, Express.js, MongoDB, Redis, Stripe
 - Frontend: React.js, Vite, TailwindCSS
+
+## License
+This project is licensed under the MIT License. See the `LICENSE` file for more details.
+
+## Notes
+This project was developed as part of a coding bootcamp final project to demonstrate:
+- The ability to customize and extend an existing codebase.
+- The integration of custom designs and thematic updates.
