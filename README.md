@@ -11,6 +11,7 @@ The **AI-Generated Image Store** is an e-commerce platform where users can explo
 - Browse and buy AI-generated artwork
 - User-friendly interface with responsive design
 - Secure payments via Stripe
+- Image Storage with Cloudinary
 - Admin tools for product and order management
 
 ---
