@@ -51,7 +51,7 @@ npm run build
 - Frontend: React.js, Vite, TailwindCSS
 
 ## License
-This project is licensed under the MIT License. See the `LICENSE` file for more details.
+This project is licensed under the MIT License. See the [MIT License](LICENSE) file for more details.
 
 ## Notes
 This project was developed as part of a coding bootcamp final project to demonstrate:
