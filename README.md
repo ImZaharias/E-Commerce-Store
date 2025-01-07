@@ -42,8 +42,8 @@ Update src/lib/axios.js with the backend URL.
 npm run build
 
 ##Access
-#Frontend: Your hosting URL
-#Backend: Use Postman or the frontend to test endpoints.
+- Frontend: Your hosting URL
+- Backend: Use Postman or the frontend to test endpoints.
 ##Technologies
-#Backend: Node.js, Express.js, MongoDB, Redis, Stripe
-#Frontend: React.js, Vite, TailwindCSS
+- Backend: Node.js, Express.js, MongoDB, Redis, Stripe
+- Frontend: React.js, Vite, TailwindCSS
