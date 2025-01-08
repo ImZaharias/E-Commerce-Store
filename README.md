@@ -54,6 +54,6 @@ npm run build
 This project is licensed under the MIT License. See the [MIT License](LICENSE) file for more details.
 
 ## Notes
-This project was developed as part of a coding bootcamp final project to demonstrate:
+This project was developed as part of a coding bootcamp(Coding Factory) final project to demonstrate:
 - The ability to customize and extend an existing codebase.
 - The integration of custom designs and thematic updates.
