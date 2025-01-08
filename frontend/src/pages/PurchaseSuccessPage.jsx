@@ -6,36 +6,38 @@ import axios from "../lib/axios";
 import Confetti from "react-confetti";
 
 const PurchaseSuccessPage = () => {
-	const [isProcessing, setIsProcessing] = useState(true);
-	const { clearCart } = useCartStore();
-	const [error, setError] = useState(null);
+	const [isProcessing, setIsProcessing] = useState(true);  // Tracks the processing state
+	const { clearCart } = useCartStore(); // Clears the cart after successful payment
+	const [error, setError] = useState(null); // Stores any errors during processing
 
 	useEffect(() => {
+		// Handles the successful checkout process
 		const handleCheckoutSuccess = async (sessionId) => {
 			try {
 				await axios.post("/payments/checkout-success", {
-					sessionId,
+					sessionId, // Send session ID to backend for processing
 				});
-				clearCart();
+				clearCart(); // Clear the cart on success
 			} catch (error) {
 				console.log(error);
 			} finally {
-				setIsProcessing(false);
+				setIsProcessing(false); // Stop the processing state
 			}
 		};
 
+		// Get the session ID from the URL query parameters
 		const sessionId = new URLSearchParams(window.location.search).get("session_id");
 		if (sessionId) {
-			handleCheckoutSuccess(sessionId);
+			handleCheckoutSuccess(sessionId); // Process the checkout if session ID is available
 		} else {
 			setIsProcessing(false);
-			setError("No session ID found in the URL");
+			setError("No session ID found in the URL"); // Handle missing session ID
 		}
 	}, [clearCart]);
 
-	if (isProcessing) return "Processing...";
+	if (isProcessing) return "Processing..."; // Show a processing message while handling the request
 
-	if (error) return `Error: ${error}`;
+	if (error) return `Error: ${error}`; // Display error if any occurred
 
 	return (
 		<div className='h-screen flex items-center justify-center px-4'>

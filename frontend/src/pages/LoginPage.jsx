@@ -5,15 +5,18 @@ import { LogIn, Mail, Lock, ArrowRight, Loader } from "lucide-react";
 import { useUserStore } from "../stores/useUserStore";
 
 const LoginPage = () => {
+	// Local state for email and password inputs
 	const [email, setEmail] = useState("");
 	const [password, setPassword] = useState("");
 
+	// Access login function and loading state from the user store
 	const { login, loading } = useUserStore();
 
+	// Handle form submission
 	const handleSubmit = (e) => {
-		e.preventDefault();
+		e.preventDefault(); // Prevent default form behavior
 		console.log(email, password);
-		login(email, password);
+		login(email, password); // Call the login function
 	};
 
 	return (

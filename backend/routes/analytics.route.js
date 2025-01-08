@@ -6,11 +6,15 @@ const router = express.Router();
 
 router.get("/", protectRoute, adminRoute, async (req, res) => {
 	try {
+		// Fetch overall analytics data
 		const analyticsData = await getAnalyticsData();
 
+		// Current date as the end date
 		const endDate = new Date();
+		// Calculate the start date (7 days ago)
 		const startDate = new Date(endDate.getTime() - 7 * 24 * 60 * 60 * 1000);
 
+		// Fetch daily sales data for the last 7 days
 		const dailySalesData = await getDailySalesData(startDate, endDate);
 
 		res.json({
@@ -20,6 +24,7 @@ router.get("/", protectRoute, adminRoute, async (req, res) => {
 	} catch (error) {
 		console.log("Error in analytics route", error.message);
 		res.status(500).json({ message: "Server error", error: error.message });
+		// Return a 500 error response in case of failure
 	}
 });
 

@@ -14,9 +14,10 @@ const tabs = [
 ];
 
 const AdminPage = () => {
-	const [activeTab, setActiveTab] = useState("create");
-	const { fetchAllProducts } = useProductStore();
+	const [activeTab, setActiveTab] = useState("create"); // State to track the active tab
+	const { fetchAllProducts } = useProductStore(); // Fetch all products from the store
 
+	// Fetch products when the component mounts
 	useEffect(() => {
 		fetchAllProducts();
 	}, [fetchAllProducts]);

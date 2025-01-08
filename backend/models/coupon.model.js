@@ -22,14 +22,14 @@ const couponSchema = new mongoose.Schema(
 			default: true,
 		},
 		userId: {
-			type: mongoose.Schema.Types.ObjectId,
+			type: mongoose.Schema.Types.ObjectId, // Reference to the User model
 			ref: "User",
 			required: true,
 			unique: true,
 		},
 	},
 	{
-		timestamps: true,
+		timestamps: true, // Automatically adds createdAt and updatedAt fields
 	}
 );
 

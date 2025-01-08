@@ -3,14 +3,14 @@ import mongoose from "mongoose";
 const orderSchema = new mongoose.Schema(
 	{
 		user: {
-			type: mongoose.Schema.Types.ObjectId,
+			type: mongoose.Schema.Types.ObjectId, // Reference to the User model
 			ref: "User",
 			required: true,
 		},
 		products: [
 			{
 				product: {
-					type: mongoose.Schema.Types.ObjectId,
+					type: mongoose.Schema.Types.ObjectId, // Reference to the Product model
 					ref: "Product",
 					required: true,
 				},
@@ -36,7 +36,7 @@ const orderSchema = new mongoose.Schema(
 			unique: true,
 		},
 	},
-	{ timestamps: true }
+	{ timestamps: true } // Automatically adds createdAt and updatedAt fields
 );
 
 const Order = mongoose.model("Order", orderSchema);

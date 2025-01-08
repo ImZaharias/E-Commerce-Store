@@ -17,19 +17,19 @@ import PurchaseSuccessPage from "./pages/PurchaseSuccessPage";
 import PurchaseCancelPage from "./pages/PurchaseCancelPage";
 
 function App() {
-	const { user, checkAuth, checkingAuth } = useUserStore();
-	const { getCartItems } = useCartStore();
+	const { user, checkAuth, checkingAuth } = useUserStore(); // Access user state and auth methods
+	const { getCartItems } = useCartStore(); // Access cart state and methods
 	useEffect(() => {
-		checkAuth();
+		checkAuth(); // Check user authentication status on app load
 	}, [checkAuth]);
 
 	useEffect(() => {
 		if (!user) return;
 
-		getCartItems();
+		getCartItems(); // Fetch cart items if the user is authenticated
 	}, [getCartItems, user]);
 
-	if (checkingAuth) return <LoadingSpinner />;
+	if (checkingAuth) return <LoadingSpinner />; // Show loading spinner during auth check
 
 	return (
 		<div className='min-h-screen bg-gradient-to-br from-[#1A1A40] via-[#3E065F] to-[#141E61] text-white relative overflow-hidden'>

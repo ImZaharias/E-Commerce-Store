@@ -4,3 +4,4 @@ import dotenv from "dotenv";
 dotenv.config();
 
 export const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
+// Initialize the Stripe instance with the secret key from environment variables

@@ -13,8 +13,10 @@ const categories = [
 ];
 
 const HomePage = () => {
+	// Access store functions and state for fetching and displaying featured products
 	const { fetchFeaturedProducts, products, isLoading } = useProductStore();
 
+	// Fetch featured products on component mount
 	useEffect(() => {
 		fetchFeaturedProducts();
 	}, [fetchFeaturedProducts]);

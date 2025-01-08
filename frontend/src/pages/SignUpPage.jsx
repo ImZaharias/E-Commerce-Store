@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { useUserStore } from "../stores/useUserStore";
 
 const SignUpPage = () => {
+	// Local state to manage form input values
 	const [formData, setFormData] = useState({
 		name: "",
 		email: "",
@@ -12,11 +13,12 @@ const SignUpPage = () => {
 		confirmPassword: "",
 	});
 
-	const { signup, loading } = useUserStore();
+	const { signup, loading } = useUserStore(); // Access signup method and loading state from the user store
 
+	// Handle form submission
 	const handleSubmit = (e) => {
 		e.preventDefault();
-		signup(formData);
+		signup(formData); // Call the signup method with form data
 	};
 
 	return (

@@ -26,37 +26,38 @@ const userSchema = new mongoose.Schema(
 					default: 1,
 				},
 				product: {
-					type: mongoose.Schema.Types.ObjectId,
+					type: mongoose.Schema.Types.ObjectId, // Reference to the Product model
 					ref: "Product",
 				},
 			},
 		],
 		role: {
 			type: String,
-			enum: ["customer", "admin"],
+			enum: ["customer", "admin"], // Allowed values
 			default: "customer",
 		},
 	},
 	{
-		timestamps: true,
+		timestamps: true, // Automatically adds createdAt and updatedAt fields
 	}
 );
 
 // Pre-save hook to hash password before saving to database
 userSchema.pre("save", async function (next) {
-	if (!this.isModified("password")) return next();
+	if (!this.isModified("password")) return next(); // Skip hashing if password is unchanged
 
 	try {
-		const salt = await bcrypt.genSalt(10);
-		this.password = await bcrypt.hash(this.password, salt);
+		const salt = await bcrypt.genSalt(10); // Generate a salt
+		this.password = await bcrypt.hash(this.password, salt); // Hash the password
 		next();
 	} catch (error) {
-		next(error);
+		next(error); // Pass errors to the next middleware
 	}
 });
 
+// Method to compare input password with the hashed password
 userSchema.methods.comparePassword = async function (password) {
-	return bcrypt.compare(password, this.password);
+	return bcrypt.compare(password, this.password); // Returns true if passwords match
 };
 
 const User = mongoose.model("User", userSchema);

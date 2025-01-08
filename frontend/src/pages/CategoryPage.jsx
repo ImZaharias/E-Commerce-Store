@@ -5,15 +5,16 @@ import { motion } from "framer-motion";
 import ProductCard from "../components/ProductCard";
 
 const CategoryPage = () => {
-	const { fetchProductsByCategory, products } = useProductStore();
+	const { fetchProductsByCategory, products } = useProductStore(); // Access fetch method and product state from store
+	const { category } = useParams(); // Get the category from the URL parameter
 
-	const { category } = useParams();
-
+	// Fetch products when the category changes or the page mounts
 	useEffect(() => {
-		fetchProductsByCategory(category);
+		fetchProductsByCategory(category); // Fetch products for the specified category
 	}, [fetchProductsByCategory, category]);
 
-	console.log("products:", products);
+	console.log("products:", products); // Debug: log fetched products
+	
 	return (
 		<div className='min-h-screen'>
 			<div className='relative z-10 max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 py-16'>
