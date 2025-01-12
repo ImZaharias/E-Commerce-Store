@@ -29,9 +29,9 @@ The **AI-Generated Image Store** is an e-commerce platform where users can explo
    cd backend
    npm install
 
-MONGODB_URI=<your-mongodb-uri>
-REDIS_URL=<your-redis-url>
-STRIPE_SECRET_KEY=<your-stripe-secret-key>
+- MONGODB_URI=<your-mongodb-uri>
+- REDIS_URL=<your-redis-url>
+- STRIPE_SECRET_KEY=<your-stripe-secret-key>
 
 npm start
 
