@@ -29,7 +29,7 @@ The **AI-Generated Image Store** is an e-commerce platform where users can explo
 - **Public** - Sample AI artwork images
 
 ### In Simple Terms:
-Think of it like **Etsy or Amazon, but specifically for AI-generated art**. Users can:
+Specifically for AI-generated art**. Users can:
 1. Browse AI artwork collections
 2. Add items to their cart
 3. Pay securely with Stripe
