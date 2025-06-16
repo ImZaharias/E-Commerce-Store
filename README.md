@@ -56,4 +56,5 @@ This project is licensed under the MIT License. See the [MIT License](LICENSE) f
 ## Notes
 Learning Project: This project was developed as part of my Coding Factory bootcamp final project, following a tutorial while coding along from scratch.
 - I customized the original concept by changing it to an AI-Generated Image Store theme, modifying colors, styling, and UI elements.
+  
 Educational Purpose: This repository demonstrates my ability to understand, implement, and customize full-stack applications using modern web technologies, serving as evidence of my learning journey and technical growth.
