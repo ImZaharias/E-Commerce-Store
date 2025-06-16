@@ -54,6 +54,6 @@ npm run build
 This project is licensed under the MIT License. See the [MIT License](LICENSE) file for more details.
 
 ## Notes
-This project was developed as part of a coding bootcamp(Coding Factory) final project to demonstrate:
-- The ability to customize and extend an existing codebase.
-- The integration of custom designs and thematic updates.
+Learning Project: This project was developed as part of my Coding Factory bootcamp final project, following a tutorial while coding along from scratch.
+- I customized the original concept by changing it to an AI-Generated Image Store theme, modifying colors, styling, and UI elements.
+Educational Purpose: This repository demonstrates my ability to understand, implement, and customize full-stack applications using modern web technologies, serving as evidence of my learning journey and technical growth.
